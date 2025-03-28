@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
             <div className="font-mono text-sm">
               <div className="mb-1.5"><span className="text-purple-400">import</span> <span className="text-blue-300">React</span> <span className="text-purple-400">from</span> <span className="text-green-300">'react'</span>;</div>
               
-              <div className="mb-1.5"><span className="text-purple-400">const</span> <span className="text-yellow-300">Portfolio</span> <span className="text-white">=</span> <span className="text-purple-400">()</span> <span className="text-white">{'=> {'}</span></div>
+              <div className="mb-1.5"><span className="text-purple-400">const</span> <span className="text-yellow-300">Portfolio</span> <span className="text-white">=</span> <span className="text-purple-400">()</span> <span className="text-white">{" => {"}</span></div>
               
               <div className="mb-1.5 pl-6"><span className="text-purple-400">const</span> <span className="text-blue-300">skills</span> <span className="text-white">=</span> <span className="text-yellow-300">[</span><span className="text-green-300">'React'</span>, <span className="text-green-300">'TypeScript'</span>, <span className="text-green-300">'Node.js'</span>, <span className="text-green-300">'Python'</span><span className="text-yellow-300">]</span>;</div>
               
