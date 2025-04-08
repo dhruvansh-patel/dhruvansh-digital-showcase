@@ -7,9 +7,9 @@ const Hero: React.FC = () => {
   const [text, setText] = useState("");
   const fullTexts = [
     "Building Digital Solutions.",
-    "Crafting Code with Precision.",
-    "Deploying Secure Web Apps.",
-    "Solving Problems with Passion."
+    "Aiming for Precision.",
+    "Securing Web Apps.",
+    "Solving Problems."
   ];
 
   useEffect(() => {
