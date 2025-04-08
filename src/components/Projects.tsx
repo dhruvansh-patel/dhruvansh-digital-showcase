@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
       ],
       challenge: "Implemented efficient socket communication for smooth gameplay.",
       repository: "#",
-      image: "/placeholder.svg",
+      image: "public/lovable-uploads/uno.png",
       technologies: ["Java", "JavaFX", "Socket Programming", "Multithreading"]
     },
     {
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       ],
       challenge: "Optimized AI processing for faster record retrieval.",
       repository: "#",
-      image: "/placeholder.svg",
+      image: "",
       technologies: ["Python", "AWS", "AI/ML", "NoSQL", "Web API"]
     },
     {
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       ],
       challenge: "Ensured accuracy in exchange rates and optimized API calls for efficiency.",
       repository: "#",
-      image: "/placeholder.svg",
+      image: "public/lovable-uploads/currency.png",
       technologies: ["Python", "API Integration", "Data Visualization", "GUI Development"]
     },
     {
@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
       ],
       challenge: "Compared important data points required while trading stocks and optimized API calls for efficiency.",
       repository: "#",
-      image: "/placeholder.svg",
+      image: "public/lovable-uploads/stocks.png",
       technologies: ["Python", "Financial APIs", "Data Analysis", "Real-time Processing"]
     }
   ];
