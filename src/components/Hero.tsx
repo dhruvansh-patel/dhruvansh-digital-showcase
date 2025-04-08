@@ -5,30 +5,53 @@ import { Code, Terminal } from 'lucide-react';
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState("");
-  const fullText = "I build digital solutions.";
-  
+  const fullTexts = [
+    "Building Digital Solutions.",
+    "Crafting Code with Precision.",
+    "Deploying Secure Web Apps.",
+    "Solving Problems with Passion."
+  ];
+
   useEffect(() => {
-    // Small delay to ensure smooth animation on page load
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+  
+    const type = () => {
+      const fullText = fullTexts[phraseIndex];
+      if (!isDeleting) {
+        currentText = fullText.substring(0, charIndex + 1);
+        setText(currentText);
+        charIndex++;
+  
+        if (charIndex === fullText.length) {
+          isDeleting = true;
+          setTimeout(type, 2000); // Pause before deleting
+          return;
+        }
+      } else {
+        currentText = fullText.substring(0, charIndex - 1);
+        setText(currentText);
+        charIndex--;
+  
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % fullTexts.length;
+        }
+      }
+  
+      setTimeout(type, isDeleting ? 50 : 100);
+    };
+  
     const timer = setTimeout(() => {
       setIsVisible(true);
+      type();
     }, 100);
-
-    // Typewriter effect for the subtitle
-    let i = 0;
-    const typeInterval = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.substring(0, i + 1));
-        i++;
-      } else {
-        clearInterval(typeInterval);
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      clearInterval(typeInterval);
-    };
+  
+    return () => clearTimeout(timer);
   }, []);
+  
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden py-12">
