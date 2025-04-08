@@ -15,42 +15,44 @@ const Hero: React.FC = () => {
   useEffect(() => {
     let phraseIndex = 0;
     let charIndex = 0;
-    let currentText = "";
     let isDeleting = false;
+    let currentText = "";
   
     const type = () => {
       const fullText = fullTexts[phraseIndex];
-      if (!isDeleting) {
-        currentText = fullText.substring(0, charIndex + 1);
-        setText(currentText);
-        charIndex++;
   
-        if (charIndex === fullText.length) {
-          isDeleting = true;
-          setTimeout(type, 2000); // Pause before deleting
-          return;
-        }
-      } else {
+      if (isDeleting) {
         currentText = fullText.substring(0, charIndex - 1);
-        setText(currentText);
         charIndex--;
-  
-        if (charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % fullTexts.length;
-        }
+      } else {
+        currentText = fullText.substring(0, charIndex + 1);
+        charIndex++;
       }
   
-      setTimeout(type, isDeleting ? 50 : 100);
+      setText(currentText);
+  
+      let delay = isDeleting ? 50 : 100;
+  
+      if (!isDeleting && charIndex === fullText.length) {
+        delay = 2000; // Wait before deleting
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % fullTexts.length;
+        delay = 500; // Wait before typing next phrase
+      }
+  
+      setTimeout(type, delay);
     };
   
     const timer = setTimeout(() => {
       setIsVisible(true);
       type();
-    }, 100);
+    }, 300);
   
     return () => clearTimeout(timer);
   }, []);
+  
   
 
   return (
