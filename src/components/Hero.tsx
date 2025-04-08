@@ -75,8 +75,8 @@ const Hero: React.FC = () => {
             </h1>
           </div>
           
-          <div className={`transition-all duration-500 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} h-14`}>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate mb-6">
+          <div className={`transition-all duration-500 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate mb-6">
               <span>{text}</span>
               <span className="animate-blink">|</span>
             </h2>
