@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const About: React.FC = () => {
   const { ref, inView } = useInView({
@@ -81,9 +82,12 @@ const About: React.FC = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-highlight opacity-20 rounded-lg blur-sm group-hover:opacity-30 transition duration-300"></div>
               <div className="relative max-w-sm rounded-lg overflow-hidden">
-                {/* Placeholder for profile image - please replace with your actual headshot */}
                 <div className="aspect-square w-full bg-navy-light flex items-center justify-center relative">
-                  <span className="text-slate">Profile Picture</span>
+                  <img 
+                    src="/lovable-uploads/5a7d4c7e-9419-4688-adf0-dd506f7cecdc.png" 
+                    alt="Dhruvansh Patel" 
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 border-2 border-highlight rounded-lg transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition duration-300"></div>
                 </div>
               </div>
