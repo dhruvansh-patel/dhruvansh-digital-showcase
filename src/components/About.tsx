@@ -42,14 +42,12 @@ const About: React.FC = () => {
               About Me
             </h2>
             <p className="text-xl mb-6">
-              I am a final-year Computer Systems Technology student with a strong passion 
-              for coding, networking, and cybersecurity. My coursework has provided me with 
-              hands-on experience in software development, networking protocols, and IT infrastructure.
+              Final-year Computer Systems Technology student with expertise in coding, networking, and cybersecurity. 
+              My hands-on experience spans software development, networking protocols, and IT infrastructure.
             </p>
             <p className="text-xl mb-10">
-              My approach combines technical excellence with creative problem-solving. 
-              I'm dedicated to creating secure, efficient, and user-friendly systems that make 
-              technology work better for people.
+              I blend technical precision with creative problem-solving to develop secure, efficient, and 
+              user-centric systems that enhance technological experiences.
             </p>
             
             <div className="mb-12">
