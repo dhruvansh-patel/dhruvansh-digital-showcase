@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       ],
       challenge: "Optimized AI processing for faster record retrieval.",
       repository: "#",
-      image: "/lovable-uploads/uno.png",
+      image: "/lovable-uploads/stocks.png",
       technologies: ["Python", "AWS", "AI/ML", "NoSQL", "Web API"]
     },
     {
