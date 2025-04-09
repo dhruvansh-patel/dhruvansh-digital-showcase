@@ -125,11 +125,11 @@ const Hero: React.FC = () => {
               
               <div className="mb-1.5 pl-16"><span className="text-blue-500">{'<p>'}</span><span className="text-white">Full Stack Developer</span><span className="text-blue-500">{'</p>'}</span></div>
               
-              <div className="mb-1.5 pl-16"><span className="text-blue-500">{'<SkillList '}</span><span className="text-yellow-300">skills</span><span className="text-white">=</span><span className="text-blue-300">{"{skills}"}</span><span className="text-blue-500">{'/>'}</span></div>
+              <div className="mb-1.5 pl-16"><span className="text-blue-500">{'<SkillList '}</span><span className="text-yellow-300">skills</span><span className="text-white">=</span><span className="text-blue-300">{'{skills}'}</span><span className="text-blue-500">{'/>'}</span></div>
               
               <div className="mb-1.5 pl-12"><span className="text-blue-500">{'</div>'}</span></div>
               
-              <span className="text-white">{")"}</span><span className="text-white">{";"}</span>
+              <div className="mb-1.5"><span className="text-white">{")"}</span><span className="text-white">;</span></div>
               <div className="mb-1.5"><span className="text-purple-400">export</span> <span className="text-purple-400">default</span> <span className="text-yellow-300">Portfolio</span>;</div>
             </div>
           </div>
