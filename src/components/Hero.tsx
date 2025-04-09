@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
               
               <div className="mb-1.5 pl-6"><span className="text-white">);</span></div>
               
-              <div className="mb-1.5"><span className="text-white">};</span></div>
+              <div className="mb-1.5"><span className="text-white">;</span></div>
               
               <div className="mb-1.5"><span className="text-purple-400">export</span> <span className="text-purple-400">default</span> <span className="text-yellow-300">Portfolio</span>;</div>
             </div>
